@@ -1,0 +1,58 @@
+<ion-view>
+	<div class="bar bar-header bar-royal">
+	  <h1 class="title">Input Pelanggan</h1>
+	</div>
+	<ion-content class="has-header">
+		<form>
+			<div class="list">
+			  	<label class="item item-input item-stacked-label">
+				    <span class="input-label">Nama</span>
+				    <input type="text" ng-model="a.nama"  >
+			  	</label>
+			  	<label class="item item-input item-stacked-label">
+				    <span class="input-label">Alamat</span>
+				    <textarea ng-model="a.alamat"></textarea>
+			  	</label>
+			  	<label class="item item-input item-stacked-label">
+				    <span class="input-label">Tanggal Order</span>
+				    <input type="date" ng-model="a.tanggal_order">
+			  	</label>
+			  	<label class="item item-input item-stacked-label">
+				    <span class="input-label">Tanggal Bayar</span>
+				    <input type="date" ng-model="a.tanggal_bayar">
+			  	</label>
+			  	<label class="item item-input item-stacked-label">
+				    <span class="input-label">Barang</span>
+				    <input type="text" ng-model="a.barang">
+			  	</label>
+			  	<label class="item item-input item-stacked-label">
+				    <span class="input-label">QTY</span>
+				    <input type="text" ng-model="a.barang">
+			  	</label>
+			  	<label class="item item-input item-stacked-label">
+				    <span class="input-label">Harga (modal)</span>
+				    <input type="text" ng-model="a.harga_barang">
+			  	</label>
+			  	<label class="item item-input item-stacked-label">
+				    <span class="input-label">Ongkir(modal)</span>
+				    <input type="text" ng-model="a.ongkir_barang">
+			  	</label>
+			  	<label class="item item-input item-stacked-label">
+				    <span class="input-label">Harga (Jual)</span>
+				    <input type="text" ng-model="a.harga_jual">
+			  	</label>
+			  	<label class="item item-input item-stacked-label">
+				    <span class="input-label">Ongkir (Jual)</span>
+				    <input type="text" ng-model="a.ongkir_jual">
+			  	</label>
+			  	<label class="item item-input item-stacked-label">
+				    <span class="input-label">Transfer</span>
+				    <input type="text" ng-model="a.transfer">
+			  	</label>
+	  		</div>
+			<div class="padding">
+	        	<button class="button button-block button-royal activated" ng-click="addPelanggan(a)">Simpan</button>
+	      	</div>
+      	</form>
+	</ion-content>
+</ion-view>

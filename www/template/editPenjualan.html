@@ -1,0 +1,55 @@
+<ion-view>
+	<div class="bar bar-header bar-positive">
+	  <h1 class="title">Data Penjualan Detail</h1>
+	</div>
+	<ion-content class="has-header">
+		<form ng-controller="updatePenjualan">
+			<div class="list" ng-repeat="b in penjualanDetail">
+			  	<label class="item item-input item-stacked-label">
+				    <span class="input-label">Nama</span>
+				    <input type="hidden" ng-model="b.id">
+				    <input type="text" ng-model="b.nama">
+			  	</label>
+			  	<label class="item item-input item-stacked-label">
+				    <span class="input-label">Alamat</span>
+				    <textarea ng-model="b.alamat"></textarea>
+			  	</label>
+			  	<label class="item item-input item-stacked-label">
+				    <span class="input-label">Tanggal Order</span>
+				    <input type="date" ng-model="b.tanggal_order"><p>{{b.tanggal_order}}</p>
+			  	</label>
+			  	<label class="item item-input item-stacked-label">
+				    <span class="input-label">Tanggal Bayar</span>
+				    <input type="date" ng-model="b.tanggal_bayar"><p>{{b.tanggal_bayar}}</p>
+			  	</label>
+			  	<label class="item item-input item-stacked-label">
+				    <span class="input-label">Barang</span>
+				    <input type="text"  ng-model="b.barang">
+			  	</label>
+			  	<label class="item item-input item-stacked-label">
+				    <span class="input-label">Harga (modal)</span>
+				    <input type="text"  ng-model="b.harga_barang">
+			  	</label>
+			  	<label class="item item-input item-stacked-label">
+				    <span class="input-label">Ongkir(modal)</span>
+				    <input type="text"  ng-model="b.ongkir_barang">
+			  	</label>
+			  	<label class="item item-input item-stacked-label">
+				    <span class="input-label">Harga (Jual)</span>
+				    <input type="text"  ng-model="b.harga_jual">
+			  	</label>
+			  	<label class="item item-input item-stacked-label">
+				    <span class="input-label">Ongkir (Jual)</span>
+				    <input type="text"  ng-model="b.ongkir_jual">
+			  	</label>
+			  	<label class="item item-input item-stacked-label">
+				    <span class="input-label">Transfer</span>
+				    <input type="text" ng-model="b.transfer">
+			  	</label>
+	  		</div>
+			<div class="padding">
+	        	<button class="button button-block button-positive activated" ng-click="editPenjualan(b)">Edit</button>
+	      	</div>
+      	</form>
+	</ion-content>
+</ion-view>

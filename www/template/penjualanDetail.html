@@ -1,0 +1,32 @@
+<ion-view>
+	<div class="bar bar-header bar-royal">
+	  <h1 class="title">Data Penjualan Detail</h1>
+	</div>
+	<ion-content class="has-header" >
+		<ion-list>
+	      	<ion-item class="item" ng-repeat="a in pelangganDetail" type="item-text-wrap" href="#/home/penjualanDetail/{{a.id}}">
+		        <h2>{{a.nama}}</h2>
+		        <p>Alamat : {{a.alamat}}</p>
+		        <p>Tanggal Order : {{a.tanggal_order}}</p>
+		        <p>Tanggal Bayar : {{a.tanggal_bayar}}</p>
+		        <p>Transfer ke : {{a.transfer}}</p>
+		        <a class="button icon-left ion-plus button-royal" href="#/home/addBarang/{{a.id_pelanggan}}">Tambah Barang</a>
+	      	</ion-item>
+
+    	</ion-list>
+    	<h2>List Barang Dibeli</h2>
+    	<ion-list>
+	      	<ion-item class="item" ng-repeat="vm in penjualanDetail" type="item-text-wrap">
+		        <h4>{{vm.nama_barang}}</h4>
+		        <p>Harga Barang (modal): {{vm.harga_barang}}</p>
+		        <p>Ongkir Barang (modal) : {{vm.ongkir_barang}}</p>
+		        <p>Harga Barang (jual) : {{vm.harga_jual}}</p>
+	         	<p>Ongkir barang (jual) :{{vm.ongkir_jual}}</p>
+         	 	<p>Total Modal : {{vm.total_modal}}</p>
+         	 	<p>Total Jual : {{vm.total_jual}}</p>
+         	  	<p><b>Laba : {{vm.total_jual - vm.total_modal}}</b></p>
+	      	</ion-item>
+    	</ion-list>
+
+	</ion-content>
+</ion-view>
